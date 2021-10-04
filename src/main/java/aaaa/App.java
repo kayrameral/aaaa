@@ -51,7 +51,7 @@ public class App {
           int input3AsInt = Integer.parseInt(input3);
           input4=sc2.nextLine();
           int input4AsInt = Integer.parseInt(input4);
-
+          sc2.close();
          
           boolean result = App.search(inputList, input2AsInt,input3AsInt,input4AsInt);
 
