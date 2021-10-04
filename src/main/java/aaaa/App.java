@@ -40,13 +40,23 @@ public class App {
           sc1.close();
           System.out.println(inputList);
 
-          
+          int input3AsInt=0;
+          int input4AsInt=0;
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
+          java.util.Scanner sc2 = new java.util.Scanner(input2);
+          sc2.useDelimiter("[;\r\n]+");
+          if(sc2.hasNext()){
           String input3 = req.queryParams("input3").replaceAll("\\s","");
-          int input3AsInt = Integer.parseInt(input3);
-          String input4= req.queryParams("input4").replaceAll("\\s","");
-          int input4AsInt = Integer.parseInt(input4);
+           input3AsInt = Integer.parseInt(input3);
+          java.util.Scanner sc3 = new java.util.Scanner(input3);
+          sc3.useDelimiter("[;\r\n]+");
+          if(sc3.hasNext()){
+            String input4 = req.queryParams("input4").replaceAll("\\s","");
+             input4AsInt = Integer.parseInt(input4);
+            }
+        }
+    
           boolean result = App.search(inputList, input2AsInt,input3AsInt,input4AsInt);
 
           Map<String, Boolean> map = new HashMap<String, Boolean>();
