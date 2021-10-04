@@ -42,23 +42,15 @@ public class App {
 
           
           String input2 = req.queryParams("input2").replaceAll("\\s","");
+          String input4= req.queryParams("input4").replaceAll("\\s","");
+          String input3= req.queryParams("input3").replaceAll("\\s","");
           java.util.Scanner sc2 = new java.util.Scanner(input2);
           input2= sc2.nextLine();
           int input2AsInt = Integer.parseInt(input2);
-          sc2.close();
-
-          String input3 = req.queryParams("input3").replaceAll("\\s","");
-          java.util.Scanner sc3 = new java.util.Scanner(input2);
-          input3=sc3.nextLine();
+          input3=sc2.nextLine();
           int input3AsInt = Integer.parseInt(input3);
-         sc3.close();
-          
-          
-          String input4= req.queryParams("input4").replaceAll("\\s","");
-          java.util.Scanner sc4 = new java.util.Scanner(input4);
-          input4=sc4.nextLine();
+          input4=sc2.nextLine();
           int input4AsInt = Integer.parseInt(input4);
-          sc4.close();
 
          
           boolean result = App.search(inputList, input2AsInt,input3AsInt,input4AsInt);
