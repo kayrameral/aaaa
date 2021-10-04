@@ -27,7 +27,7 @@ public class App {
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
           System.out.println(req.queryParams("input2"));
-
+         
           String input1 = req.queryParams("input1");
           java.util.Scanner sc1 = new java.util.Scanner(input1);
           sc1.useDelimiter("[;\r\n]+");
@@ -52,7 +52,9 @@ public class App {
           input4=sc2.next();
           int input4AsInt = Integer.parseInt(input4);
           sc2.close();
-         
+          System.out.println(input2);
+          System.out.println(input3);
+          System.out.println(input4);
           boolean result = App.search(inputList, input2AsInt,input3AsInt,input4AsInt);
 
           Map<String, Boolean> map = new HashMap<String, Boolean>();
