@@ -45,11 +45,11 @@ public class App {
           String input4= "";
           String input3= "";
           java.util.Scanner sc2 = new java.util.Scanner(input2);
-          input2= sc2.nextLine();
+          input2= sc2.next();
           int input2AsInt = Integer.parseInt(input2);
-          input3=sc2.nextLine();
+          input3=sc2.next();
           int input3AsInt = Integer.parseInt(input3);
-          input4=sc2.nextLine();
+          input4=sc2.next();
           int input4AsInt = Integer.parseInt(input4);
           sc2.close();
          
