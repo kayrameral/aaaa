@@ -42,8 +42,8 @@ public class App {
 
           
           String input2 = req.queryParams("input2").replaceAll("\\s","");
-          String input4= req.queryParams("input4").replaceAll("\\s","");
-          String input3= req.queryParams("input3").replaceAll("\\s","");
+          String input4= "";
+          String input3= "";
           java.util.Scanner sc2 = new java.util.Scanner(input2);
           input2= sc2.nextLine();
           int input2AsInt = Integer.parseInt(input2);
