@@ -40,23 +40,21 @@ public class App {
           sc1.close();
           System.out.println(inputList);
 
-          int input3AsInt=0;
-          int input4AsInt=0;
+          
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
           java.util.Scanner sc2 = new java.util.Scanner(input2);
           sc2.useDelimiter("[;\r\n]+");
-          if(sc2.hasNext()){
+          sc2.nextLine();
+          sc2.close();
           String input3 = req.queryParams("input3").replaceAll("\\s","");
-           input3AsInt = Integer.parseInt(input3);
-          java.util.Scanner sc3 = new java.util.Scanner(input3);
+          int input3AsInt = Integer.parseInt(input3);
+          java.util.Scanner sc3 = new java.util.Scanner(input2);
           sc3.useDelimiter("[;\r\n]+");
-          if(sc3.hasNext()){
-            String input4 = req.queryParams("input4").replaceAll("\\s","");
-             input4AsInt = Integer.parseInt(input4);
-            }
-        }
-    
+          sc3.nextLine();
+          sc3.close();
+          String input4= req.queryParams("input4").replaceAll("\\s","");
+          int input4AsInt = Integer.parseInt(input4);
           boolean result = App.search(inputList, input2AsInt,input3AsInt,input4AsInt);
 
           Map<String, Boolean> map = new HashMap<String, Boolean>();
@@ -83,7 +81,7 @@ public class App {
     }
 
 
-    public static boolean search(ArrayList<Integer> array, int e,int f,int k) {
+    public static boolean search(ArrayList<Integer> array, Integer e,int f,int k) {
         System.out.println("inside search");
         if (array == null) return false;
   
