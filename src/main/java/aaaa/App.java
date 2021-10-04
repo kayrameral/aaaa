@@ -79,7 +79,7 @@ public class App {
     }
 
 
-    public static boolean search(ArrayList<Integer> array, Integer e,int f,int k) {
+    public static boolean search(ArrayList<Integer> array, int e,int f,int k) {
         System.out.println("inside search");
         if (array == null) return false;
   
